@@ -22,6 +22,7 @@ Partial Class MathContestForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.InformationGroupBox = New System.Windows.Forms.GroupBox()
         Me.NameLabel = New System.Windows.Forms.Label()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
@@ -46,6 +47,7 @@ Partial Class MathContestForm
         Me.SummaryButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SubmitButton = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.InformationGroupBox.SuspendLayout()
         Me.ProblemGroupBox.SuspendLayout()
         Me.TypeGroupBox.SuspendLayout()
@@ -82,6 +84,7 @@ Partial Class MathContestForm
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(218, 26)
         Me.NameTextBox.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.NameTextBox, "Enter the name of the Student")
         '
         'GradeLabel
         '
@@ -107,6 +110,7 @@ Partial Class MathContestForm
         Me.GradeTextBox.Name = "GradeTextBox"
         Me.GradeTextBox.Size = New System.Drawing.Size(26, 26)
         Me.GradeTextBox.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.GradeTextBox, "Enter the grade of the Student (1st - 4th)")
         '
         'AgeTextBox
         '
@@ -114,6 +118,7 @@ Partial Class MathContestForm
         Me.AgeTextBox.Name = "AgeTextBox"
         Me.AgeTextBox.Size = New System.Drawing.Size(26, 26)
         Me.AgeTextBox.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.AgeTextBox, "Enter the age of the Student (7-11)")
         '
         'ProblemGroupBox
         '
@@ -146,6 +151,7 @@ Partial Class MathContestForm
         Me.StudentAnswerTextBox.Name = "StudentAnswerTextBox"
         Me.StudentAnswerTextBox.Size = New System.Drawing.Size(173, 26)
         Me.StudentAnswerTextBox.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.StudentAnswerTextBox, "Enter the Student's answer")
         '
         'SecondNumberLabel
         '
@@ -162,6 +168,7 @@ Partial Class MathContestForm
         Me.SecondNumberTextBox.Name = "SecondNumberTextBox"
         Me.SecondNumberTextBox.Size = New System.Drawing.Size(173, 26)
         Me.SecondNumberTextBox.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.SecondNumberTextBox, "Second Number")
         '
         'FirstNumberLabel
         '
@@ -178,6 +185,7 @@ Partial Class MathContestForm
         Me.FirstNumberTextBox.Name = "FirstNumberTextBox"
         Me.FirstNumberTextBox.Size = New System.Drawing.Size(173, 26)
         Me.FirstNumberTextBox.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.FirstNumberTextBox, "First Number")
         '
         'TypeGroupBox
         '
@@ -199,8 +207,8 @@ Partial Class MathContestForm
         Me.DivideRadioButton.Name = "DivideRadioButton"
         Me.DivideRadioButton.Size = New System.Drawing.Size(77, 24)
         Me.DivideRadioButton.TabIndex = 9
-        Me.DivideRadioButton.TabStop = True
         Me.DivideRadioButton.Text = "Divide"
+        Me.ToolTip1.SetToolTip(Me.DivideRadioButton, "Division problem")
         Me.DivideRadioButton.UseVisualStyleBackColor = True
         '
         'MultiplyRadioButton
@@ -210,8 +218,8 @@ Partial Class MathContestForm
         Me.MultiplyRadioButton.Name = "MultiplyRadioButton"
         Me.MultiplyRadioButton.Size = New System.Drawing.Size(86, 24)
         Me.MultiplyRadioButton.TabIndex = 8
-        Me.MultiplyRadioButton.TabStop = True
         Me.MultiplyRadioButton.Text = "Multiply"
+        Me.ToolTip1.SetToolTip(Me.MultiplyRadioButton, "Multiplication problem")
         Me.MultiplyRadioButton.UseVisualStyleBackColor = True
         '
         'SubtractRadioButton
@@ -221,19 +229,21 @@ Partial Class MathContestForm
         Me.SubtractRadioButton.Name = "SubtractRadioButton"
         Me.SubtractRadioButton.Size = New System.Drawing.Size(95, 24)
         Me.SubtractRadioButton.TabIndex = 7
-        Me.SubtractRadioButton.TabStop = True
         Me.SubtractRadioButton.Text = "Subtract"
+        Me.ToolTip1.SetToolTip(Me.SubtractRadioButton, "Subtraction problem")
         Me.SubtractRadioButton.UseVisualStyleBackColor = True
         '
         'AddRadioButton
         '
         Me.AddRadioButton.AutoSize = True
+        Me.AddRadioButton.Checked = True
         Me.AddRadioButton.Location = New System.Drawing.Point(20, 40)
         Me.AddRadioButton.Name = "AddRadioButton"
         Me.AddRadioButton.Size = New System.Drawing.Size(63, 24)
         Me.AddRadioButton.TabIndex = 6
         Me.AddRadioButton.TabStop = True
         Me.AddRadioButton.Text = "Add"
+        Me.ToolTip1.SetToolTip(Me.AddRadioButton, "Addition problem")
         Me.AddRadioButton.UseVisualStyleBackColor = True
         '
         'FunctionGroupBox
@@ -255,6 +265,7 @@ Partial Class MathContestForm
         Me.ExitButton.Size = New System.Drawing.Size(188, 62)
         Me.ExitButton.TabIndex = 13
         Me.ExitButton.Text = "Exit"
+        Me.ToolTip1.SetToolTip(Me.ExitButton, "Exit the Program")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'SummaryButton
@@ -265,6 +276,7 @@ Partial Class MathContestForm
         Me.SummaryButton.Size = New System.Drawing.Size(188, 62)
         Me.SummaryButton.TabIndex = 12
         Me.SummaryButton.Text = "Summary"
+        Me.ToolTip1.SetToolTip(Me.SummaryButton, "Generates the results for the Student")
         Me.SummaryButton.UseVisualStyleBackColor = True
         '
         'ClearButton
@@ -274,6 +286,7 @@ Partial Class MathContestForm
         Me.ClearButton.Size = New System.Drawing.Size(188, 62)
         Me.ClearButton.TabIndex = 11
         Me.ClearButton.Text = "Clear"
+        Me.ToolTip1.SetToolTip(Me.ClearButton, "Clears all information (ESC)")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'SubmitButton
@@ -284,6 +297,7 @@ Partial Class MathContestForm
         Me.SubmitButton.Size = New System.Drawing.Size(188, 62)
         Me.SubmitButton.TabIndex = 10
         Me.SubmitButton.Text = "Submit"
+        Me.ToolTip1.SetToolTip(Me.SubmitButton, "Submit the Student's answer (ENTER)")
         Me.SubmitButton.UseVisualStyleBackColor = True
         '
         'MathContestForm
@@ -296,7 +310,7 @@ Partial Class MathContestForm
         Me.Controls.Add(Me.ProblemGroupBox)
         Me.Controls.Add(Me.InformationGroupBox)
         Me.Name = "MathContestForm"
-        Me.Text = "Form1"
+        Me.Text = "Math Contest"
         Me.InformationGroupBox.ResumeLayout(False)
         Me.InformationGroupBox.PerformLayout()
         Me.ProblemGroupBox.ResumeLayout(False)
@@ -332,4 +346,5 @@ Partial Class MathContestForm
     Friend WithEvents DivideRadioButton As RadioButton
     Friend WithEvents MultiplyRadioButton As RadioButton
     Friend WithEvents SubtractRadioButton As RadioButton
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
