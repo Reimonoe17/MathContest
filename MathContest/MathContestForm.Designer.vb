@@ -302,8 +302,10 @@ Partial Class MathContestForm
         '
         'MathContestForm
         '
+        Me.AcceptButton = Me.SubmitButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.ClearButton
         Me.ClientSize = New System.Drawing.Size(635, 349)
         Me.Controls.Add(Me.FunctionGroupBox)
         Me.Controls.Add(Me.TypeGroupBox)

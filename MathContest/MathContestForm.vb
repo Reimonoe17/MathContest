@@ -96,12 +96,13 @@ Public Class MathContestForm
     End Sub
     Private Sub SubmitButton_Click(sender As Object, e As EventArgs) Handles SubmitButton.Click
         Dim input As Integer = CInt(StudentAnswerTextBox.Text)
+        Dim answer = EnterAnswer()
 
-        If input = EnterAnswer() Then
+        If input = answer Then
             MsgBox("Correct!")
             Tally(True)
-        ElseIf input <> EnterAnswer() Then
-            MsgBox("Incorrect")
+        ElseIf input <> answer Then
+            MsgBox("Incorrect" & vbNewLine & "Answer: " & CStr(answer))
             Tally(False)
         End If
         FirstNumberTextBox.Text = RandomInteger()
